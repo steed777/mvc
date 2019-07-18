@@ -1,10 +1,10 @@
 
 import controller.Controller;
-        import model.FakeModel;
-        import model.MainModel;
-        import model.Model;
-        import view.EditUserView;
-        import view.UsersView;
+import model.FakeModel;
+import model.MainModel;
+import model.Model;
+import view.EditUserView;
+import view.UsersView;
 
 public class Solution {
     public static void main(String[] args) {
@@ -22,7 +22,7 @@ public class Solution {
         usersView.fireEventShowAllUsers();
         usersView.fireEventOpenUserEditForm(126L);
         editUserView.fireEventUserDeleted(124L);
-        editUserView.fireEventUserChanged("123",126L,2);
+        editUserView.fireEventUserChanged("123", 126L, 2);
         usersView.fireEventShowDeletedUsers();
     }
 }

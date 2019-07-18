@@ -9,24 +9,28 @@ import view.UsersView;
 
 public class Controller {
     private Model model;
-private UsersView usersView;
-private EditUserView editUserView;
+    private UsersView usersView;
+    private EditUserView editUserView;
 
-    public void onOpenUserEditForm(long userId){
+    public void onOpenUserEditForm(long userId) {
         model.loadUserById(userId);
         editUserView.refresh(model.getModelData());
     }
+
     public void setModel(Model model) {
         this.model = model;
     }
-    public void onShowAllUsers(){
+
+    public void onShowAllUsers() {
         model.loadUsers();
         usersView.refresh(model.getModelData());
     }
-    public void onShowAllDeletedUsers(){
+
+    public void onShowAllDeletedUsers() {
         model.loadDeletedUsers();
         usersView.refresh(model.getModelData());
     }
+
     public void setUsersView(UsersView usersView) {
         this.usersView = usersView;
     }
@@ -42,8 +46,8 @@ private EditUserView editUserView;
 
     public void onUserChange(String name, long id, int level) {
 
-            model.changeUserData(name,id,level);
-            usersView.refresh(model.getModelData());
+        model.changeUserData(name, id, level);
+        usersView.refresh(model.getModelData());
 
     }
 }
